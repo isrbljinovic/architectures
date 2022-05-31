@@ -1,4 +1,5 @@
-﻿using DokumentiApi.DataTransferObjects;
+﻿using System.Collections.Generic;
+using DokumentiApi.DataTransferObjects;
 
 #nullable disable
 
@@ -6,20 +7,34 @@ namespace DokumentiApi.Models
 {
     public partial class Dokument
     {
+        public Dokument()
+        {
+            Stavkas = new HashSet<Stavka>();
+        }
+
         public int Id { get; set; }
         public string Vrsta { get; set; }
         public int? Broj { get; set; }
-        public int IdPartner { get; set; }
+        public int? PartnerId { get; set; }
+
+        public virtual ICollection<Stavka> Stavkas { get; set; }
 
         public static Dokument FromDto(DokumentDto dokument)
         {
             var dok = new Dokument
             {
-                IdPartner = dokument.PartnerId,
+                PartnerId = dokument.PartnerId,
                 Vrsta = dokument.Vrsta,
                 Broj = dokument.Broj,
                 Id = dokument.Id,
+                Stavkas = new List<Stavka>(),
             };
+
+            foreach (var stavka in dokument.Stavkas)
+            {
+                dok.Stavkas.Add(
+                    Stavka.FromDto(stavka));
+            }
 
             return dok;
         }
@@ -28,11 +43,18 @@ namespace DokumentiApi.Models
         {
             var dok = new DokumentDto
             {
-                PartnerId = dokument.IdPartner,
+                PartnerId = dokument.PartnerId.HasValue ? dokument.PartnerId.Value : 0,
                 Vrsta = dokument.Vrsta,
                 Broj = dokument.Broj,
                 Id = dokument.Id,
+                Stavkas = new List<StavkaDto>(),
             };
+
+            foreach (var stavka in dokument.Stavkas)
+            {
+                dok.Stavkas.Add(
+                    Stavka.ToDto(stavka));
+            }
 
             return dok;
         }

@@ -16,6 +16,7 @@ namespace DokumentiApi.Models
         }
 
         public virtual DbSet<Dokument> Dokuments { get; set; }
+        public virtual DbSet<Stavka> Stavkas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,16 +24,22 @@ namespace DokumentiApi.Models
 
             modelBuilder.Entity<Dokument>(entity =>
             {
-                entity.HasKey(e => e.IdPartner)
-                    .HasName("Dokument_pkey");
-
                 entity.ToTable("Dokument");
 
-                entity.Property(e => e.IdPartner).ValueGeneratedNever();
+                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+            });
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .UseIdentityAlwaysColumn();
+            modelBuilder.Entity<Stavka>(entity =>
+            {
+                entity.ToTable("Stavka");
+
+                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+
+                entity.HasOne(d => d.Dokument)
+                    .WithMany(p => p.Stavkas)
+                    .HasForeignKey(d => d.DokumentId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Stavka_DokumentId_fkey");
             });
 
             OnModelCreatingPartial(modelBuilder);

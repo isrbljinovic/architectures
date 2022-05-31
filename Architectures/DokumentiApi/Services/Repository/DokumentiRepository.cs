@@ -25,12 +25,14 @@ namespace DokumentiApi.Services.Repository
         public async Task<Dokument> Get(int id, bool trackChanges)
         {
             return await FindByCondition(d => d.Id.Equals(id), trackChanges)
+                .Include(s => s.Stavkas)
                 .SingleAsync();
         }
 
         public async Task<IEnumerable<Dokument>> GetAll(bool trackChanges)
         {
             return await FindAll(trackChanges)
+                .Include(s => s.Stavkas)
                 .ToListAsync();
         }
     }

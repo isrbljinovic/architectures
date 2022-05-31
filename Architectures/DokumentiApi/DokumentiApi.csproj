@@ -19,6 +19,10 @@
     <None Remove="Contracts\Repository\" />
     <None Remove="DataTransferObjects\" />
     <None Remove="Controllers\" />
+    <None Remove="Models\" />
+    <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
+    <None Remove="Swashbuckle.AspNetCore.Swagger" />
+    <None Remove="Swashbuckle.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Steeltoe.Common.Hosting" Version="3.2.0" />
@@ -34,6 +38,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
@@ -43,5 +48,6 @@
     <Folder Include="Contracts\Repository\" />
     <Folder Include="DataTransferObjects\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

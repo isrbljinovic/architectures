@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Hosting;
+ using Microsoft.Extensions.Hosting;
+using Steeltoe.Common.Hosting;
 
 namespace DokumentiApi
 {
@@ -21,6 +16,7 @@ namespace DokumentiApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+            .UseCloudHosting(80);
     }
 }

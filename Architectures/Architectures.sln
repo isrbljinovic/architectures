@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DokumentiApi", "DokumentiAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtikliApi", "ArtikliApi\ArtikliApi.csproj", "{AC321C2E-5FC2-4261-8F9F-83CBA0C593A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartneriApi", "PartneriApi\PartneriApi.csproj", "{6A6879A9-8AD2-4199-8232-8394C63AF5A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AC321C2E-5FC2-4261-8F9F-83CBA0C593A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC321C2E-5FC2-4261-8F9F-83CBA0C593A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC321C2E-5FC2-4261-8F9F-83CBA0C593A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

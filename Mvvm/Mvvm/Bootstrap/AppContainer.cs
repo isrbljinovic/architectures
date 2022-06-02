@@ -1,5 +1,8 @@
 ﻿using System;
 using Autofac;
+using Mvvm.Contracts;
+using Mvvm.Services;
+using Mvvm.ViewModels;
 
 namespace Mvvm.Bootstrap
 {
@@ -11,9 +14,13 @@ namespace Mvvm.Bootstrap
         {
             var builder = new ContainerBuilder();
 
-            //builder.RegisterType<LoginViewModel>();
+            builder.RegisterType<DokumentiViewModel>();
+            builder.RegisterType<StavkeViewModel>();
+            builder.RegisterType<CreateDokumentViewModel>();
 
-            //builder.RegisterType<NavigationService>().As<INavigationService>();
+
+            builder.RegisterType<HttpHandler>().As<IHttpHandler>();
+            builder.RegisterType<DokumentiService>().As<IDokumentiService>();
 
             _container = builder.Build();
         }

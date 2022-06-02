@@ -1,4 +1,5 @@
-﻿using Mvvm.Views;
+﻿using Mvvm.Bootstrap;
+using Mvvm.Views;
 using Xamarin.Forms;
 
 namespace Mvvm
@@ -9,7 +10,9 @@ namespace Mvvm
         {
             InitializeComponent();
 
-            MainPage = new MainView();
+            AppContainer.BuildContainer();
+
+            MainPage = new DokumentiView();
         }
 
         protected override void OnStart()

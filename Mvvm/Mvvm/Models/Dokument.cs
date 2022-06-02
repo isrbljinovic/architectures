@@ -1,0 +1,16 @@
+﻿using System.Collections.Generic;
+
+namespace Mvvm.Models
+{
+    public class Dokument
+	{
+        public int Id { get; set; }
+        public string Vrsta { get; set; }
+        public int? Broj { get; set; }
+        public int PartnerId { get; set; }
+        public string PartnerNaziv { get; set; }
+
+        public List<Stavka> Stavkas { get; set; }
+    }
+}
+

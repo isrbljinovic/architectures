@@ -10,11 +10,14 @@ namespace DokumentiApi.Services
     public class DokumentiService : IDokumentiService
     {
         private readonly IRepositoryManager _repositoryManager;
+        private readonly INaziviService _naziviService;
 
         public DokumentiService(
-            IRepositoryManager repositoryManager)
+            IRepositoryManager repositoryManager,
+            INaziviService naziviService)
         {
             _repositoryManager = repositoryManager;
+            _naziviService = naziviService;
         }
 
         public async Task Create(DokumentDto dokumentDto)
@@ -45,7 +48,13 @@ namespace DokumentiApi.Services
 
             foreach (var doc in dox)
             {
-                dokumenti.Add(Dokument.ToDto(doc));
+                var dto = Dokument.ToDto(doc);
+                foreach (var stavka in dto.Stavkas)
+                {
+                    stavka.NazivArtikla = await _naziviService.GetArtikl(stavka.SifraArtikla);
+                }
+                dto.PartnerNaziv = await _naziviService.GetPartner(doc.PartnerId.Value);
+                dokumenti.Add(dto);
             }
 
             return dokumenti;

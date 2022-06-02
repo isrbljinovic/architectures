@@ -17,6 +17,7 @@
     <None Remove="Services\" />
     <None Remove="Services\Repository\" />
     <None Remove="Controllers\" />
+    <None Remove="Steeltoe.Common.Hosting" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
@@ -30,6 +31,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+    <PackageReference Include="Steeltoe.Common.Hosting" Version="3.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />

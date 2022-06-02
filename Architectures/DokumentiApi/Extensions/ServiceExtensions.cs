@@ -27,5 +27,20 @@ namespace DokumentiApi.Extensions
         {
             services.AddScoped<IDokumentiService, DokumentiService>();
         }
+
+        public static void AddHttpClients(this IServiceCollection services)
+        {
+            services.AddHttpClient("ArtikliApi", httpClient =>
+            {
+                httpClient.BaseAddress = new System.Uri("http://localhost:80/artikli/");
+            });
+
+            services.AddHttpClient("PartneriApi", httpClient =>
+            {
+                httpClient.BaseAddress = new System.Uri("http://localhost:82/partneri/");
+            });
+
+            services.AddTransient<INaziviService, NaziviService>();
+        }
     }
 }

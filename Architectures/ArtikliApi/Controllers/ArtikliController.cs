@@ -45,5 +45,12 @@ namespace ArtikliApi.Controllers
         {
             await _artikliService.Delete(id);
         }
+
+        [HttpGet("{sifra}/naziv")]
+        public async Task<string> GetNaziv(int sifra)
+        {
+            var artikl = await _artikliService.Get(sifra, false);
+            return artikl.Naziv;
+        }
     }
 }

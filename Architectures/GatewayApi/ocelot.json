@@ -1,0 +1,106 @@
+﻿{
+  "Routes": [
+    // ArtikliApi
+    {
+      "DownstreamPathTemplate": "/artikli",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/artikli",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/artikli/{sifra}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/artikli/{sifra}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/artikli/{sifra}/naziv",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/artikli/{sifra}/naziv",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    // DokumentiApi
+    {
+      "DownstreamPathTemplate": "/dokumenti/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/dokumenti/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/dokumenti",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/dokumenti",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    // PartneriApi
+    {
+      "DownstreamPathTemplate": "/partneri",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 82
+        }
+      ],
+      "UpstreamPathTemplate": "/partneri",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/partneri/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 82
+        }
+      ],
+      "UpstreamPathTemplate": "/partneri/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/partneri/{id}/naziv",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 82
+        }
+      ],
+      "UpstreamPathTemplate": "/partneri/{id}/naziv",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:84"
+  }
+}

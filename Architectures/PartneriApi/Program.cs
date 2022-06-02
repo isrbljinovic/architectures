@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Steeltoe.Common.Hosting;
 
 namespace PartneriApi
 {
@@ -15,6 +16,7 @@ namespace PartneriApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+            .UseCloudHosting(82);
     }
 }

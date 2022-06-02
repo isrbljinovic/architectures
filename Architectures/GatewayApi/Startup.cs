@@ -1,11 +1,13 @@
-﻿using ArtikliApi.Extensions;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
-namespace ArtikliApi
+namespace GatewayApi
 {
     public class Startup
     {
@@ -19,9 +21,10 @@ namespace ArtikliApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.ConfigureDbContext(Configuration);
-            services.ConfigureRepositoryManager();
-            services.ConfigureDataServices();
+            services
+                .AddOcelot();
+                //.AddConsul()
+                //.AddConfigStoredInConsul();
             services.AddControllers();
         }
 
@@ -43,6 +46,8 @@ namespace ArtikliApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseOcelot();
         }
     }
 }

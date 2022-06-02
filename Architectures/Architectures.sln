@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtikliApi", "ArtikliApi\Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartneriApi", "PartneriApi\PartneriApi.csproj", "{6A6879A9-8AD2-4199-8232-8394C63AF5A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApi", "GatewayApi\GatewayApi.csproj", "{92478C9F-FFE3-4466-9DCB-3BCF39631DAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,11 +29,20 @@ Global
 		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A6879A9-8AD2-4199-8232-8394C63AF5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92478C9F-FFE3-4466-9DCB-3BCF39631DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92478C9F-FFE3-4466-9DCB-3BCF39631DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92478C9F-FFE3-4466-9DCB-3BCF39631DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92478C9F-FFE3-4466-9DCB-3BCF39631DAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BBC16B5-CBE0-4BFA-882C-8220E9548E8E}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 	EndGlobalSection
 EndGlobal

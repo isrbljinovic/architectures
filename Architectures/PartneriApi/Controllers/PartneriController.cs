@@ -45,5 +45,12 @@ namespace PartneriApi.Controllers
         {
             await _partneriService.Delete(id);
         }
+
+        [HttpGet("{id}/naziv")]
+        public async Task<string> GetNaziv(int id)
+        {
+            var partner = await _partneriService.Get(id, false);
+            return partner.Naziv;
+        }
     }
 }

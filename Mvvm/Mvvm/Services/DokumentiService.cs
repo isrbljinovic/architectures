@@ -16,9 +16,22 @@ namespace Mvvm.Services
             _httpHandler = httpHandler;
         }
 
-        public Task Create(Dokument dokument)
+        public async Task Create(Dokument dokument)
         {
-            throw new NotImplementedException();
+            var url = ApiConstants.BaseUrl + ApiConstants.PostDokument;
+
+            await _httpHandler.PostAsync(url, dokument);
+
+            return; 
+        }
+
+        public async Task<string> GetNazivArtikla(int sifraArtikla)
+        {
+            var url = $"{ApiConstants.BaseUrl}artikli/{sifraArtikla}/naziv";
+
+            var naziv = await _httpHandler.GetAsync<string>(url);
+
+            return naziv;
         }
 
         public async Task<List<Dokument>> GettAll()

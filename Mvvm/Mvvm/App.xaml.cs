@@ -1,4 +1,5 @@
 ﻿using Mvvm.Bootstrap;
+using Mvvm.Contracts;
 using Mvvm.Views;
 using Xamarin.Forms;
 
@@ -12,7 +13,13 @@ namespace Mvvm
 
             AppContainer.BuildContainer();
 
-            MainPage = new DokumentiView();
+            InitializeNavigation();
+        }
+
+        private async void InitializeNavigation()
+        {
+            var navigationService = AppContainer.Resolve<INavigationService>();
+            await navigationService.InitializeAsync();
         }
 
         protected override void OnStart()

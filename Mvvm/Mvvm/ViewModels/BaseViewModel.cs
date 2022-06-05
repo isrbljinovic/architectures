@@ -1,14 +1,17 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Mvvm.Contracts;
+
 namespace Mvvm.ViewModels
 {
-    public class ViewModelBase : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
-        //protected readonly INavigationService _navigationService;
-        
-        public ViewModelBase()
+        protected readonly INavigationService _navigationService;
+
+        public BaseViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
         }
 
         private bool _isBusy;

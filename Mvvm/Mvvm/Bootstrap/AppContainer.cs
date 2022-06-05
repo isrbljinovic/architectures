@@ -17,10 +17,12 @@ namespace Mvvm.Bootstrap
             builder.RegisterType<DokumentiViewModel>();
             builder.RegisterType<StavkeViewModel>();
             builder.RegisterType<CreateDokumentViewModel>();
+            builder.RegisterType<MainViewModel>();
 
 
             builder.RegisterType<HttpHandler>().As<IHttpHandler>();
             builder.RegisterType<DokumentiService>().As<IDokumentiService>();
+            builder.RegisterType<NavigationService>().As<INavigationService>();
 
             _container = builder.Build();
         }

@@ -4,14 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:utility="clr-namespace:Mvvm.Utility"
     x:Name="Dokumenti"
+    Title="Dokumenti"
     utility:ViewModelLocator.AutoWireViewModel="True"
     xmlns:behaviors="clr-namespace:Mvvm.Behaviors"
     x:Class="Mvvm.Views.DokumentiView">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Frame BackgroundColor="#2196F3" Padding="10, 40, 10, 10" CornerRadius="0">
-            <Label Text="Dokumenti" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-            </Frame>
             <ListView
                 BackgroundColor="FloralWhite"
                 HasUnevenRows="True"
@@ -22,8 +20,8 @@
                 </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <Label>
+                        <ViewCell Height="40">
+                            <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="{Binding Vrsta}"/>

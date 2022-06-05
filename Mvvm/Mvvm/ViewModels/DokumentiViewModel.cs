@@ -1,11 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Mvvm.Contracts;
 using Mvvm.Models;
+using Xamarin.Forms;
 
 namespace Mvvm.ViewModels
 {
-    public class DokumentiViewModel : ViewModelBase
+    public class DokumentiViewModel : BaseViewModel
 	{
         private readonly IDokumentiService _dokumentiService;
 
@@ -19,10 +22,21 @@ namespace Mvvm.ViewModels
             set { _selectedDokument = value; OnPropertyChanged(); }
         }
 
-        public DokumentiViewModel(IDokumentiService dokumentiService)
+        public DokumentiViewModel(
+            INavigationService navigationService,
+            IDokumentiService dokumentiService) : base(navigationService)
 		{
             _dokumentiService = dokumentiService;
             Init();
+        }
+
+        public ICommand DokumentiViewCommand => new Command(OpenStavke);
+        public ICommand ItemSelectedCommand => new Command(OpenStavke);
+
+        private async void OpenStavke()
+        {
+            await _navigationService.NavigateToAsync<StavkeViewModel>();
+            MessagingCenter.Send(this, "StavkeView", SelectedDokument.Stavkas);
         }
 
         private async void Init()

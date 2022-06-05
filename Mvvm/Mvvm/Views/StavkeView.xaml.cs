@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Mvvm.Views
-{	
-	public partial class StavkeView : ContentPage
+{
+    public partial class StavkeView : ContentPage
 	{	
 		public StavkeView ()
 		{
 			InitializeComponent ();
 		}
-	}
+    }
 }
 

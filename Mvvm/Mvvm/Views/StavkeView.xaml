@@ -2,9 +2,32 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:utility="clr-namespace:Mvvm.Utility"
+    x:Name="Stavke"
+    Title="Stavke"
+    utility:ViewModelLocator.AutoWireViewModel="True"
     x:Class="Mvvm.Views.StavkeView">
     <ContentPage.Content>
-        <Label Text="Ovdje dodu stavke dokumenta"></Label>
+        <ListView
+                BackgroundColor="FloralWhite"
+                HasUnevenRows="True"
+                ItemsSource="{Binding Stavke}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="40">
+                            <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding NazivArtikla}"/>
+                                        <Span Text=" : "/>
+                                        <Span Text="{Binding Kolicina}"/>
+                                    </FormattedString>
+                              </Label.FormattedText>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
     </ContentPage.Content>
 </ContentPage>
 

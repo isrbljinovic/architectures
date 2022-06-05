@@ -2,8 +2,54 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:utility="clr-namespace:Mvvm.Utility"
+    x:Name="Create"
+    Title="Novi dokument"
+    utility:ViewModelLocator.AutoWireViewModel="True"
     x:Class="Mvvm.Views.CreateDokumentView">
     <ContentPage.Content>
-        <Label Text="Ovdje cemo kreirat novi dokument"></Label>
+        <StackLayout Orientation="Vertical" Margin="10">
+            <Label Text="Vrsta dokumenta" />
+            <Entry Placeholder="Vrsta" Text="{Binding Dokument.Vrsta}"></Entry>
+            <Label Text="Broj dokumenta" />
+            <Entry Placeholder="Broj" Text="{Binding Dokument.Broj}"></Entry>
+            <Label Text="Partner"/>
+            <Entry Placeholder="Partner" Text="{Binding Dokument.PartnerId}"></Entry>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="35"/>
+              </Grid.RowDefinitions>
+                <Label Text="Šifra artikla" Grid.Row="0" Grid.Column="0"/>
+                <Entry Placeholder="Šifra" Grid.Row="1" Grid.Column="0" Text="{Binding SifraArtikla}"></Entry>
+                <Label Text="Količina" Grid.Row="0" Grid.Column="1"/>
+                <Entry Placeholder="Količina" Grid.Row="1" Grid.Column="1" Text="{Binding KolicinaArtikla}"></Entry>
+            </Grid>
+            <Button Text="Dodaj artikl" Background="LightGray" Command="{Binding DodajArtiklCommand}"/>
+            <ListView
+                BackgroundColor="FloralWhite"
+                ItemsSource="{Binding Stavke}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding NazivArtikla}"/>
+                                        <Span Text=" : "/>
+                                        <Span Text="{Binding Kolicina}"/>
+                                    </FormattedString>
+                              </Label.FormattedText>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Spremi" Background="LightGray" Command="{Binding SpremiDokumentCommand}"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

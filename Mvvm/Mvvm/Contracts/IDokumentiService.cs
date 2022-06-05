@@ -9,6 +9,8 @@ namespace Mvvm.Contracts
 		Task<List<Dokument>> GettAll();
 
 		Task Create(Dokument dokument);
+
+		Task<string> GetNazivArtikla(int sifraArtikla);
 	}
 }
 

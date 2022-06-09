@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using DokumentiApi.Contracts;
-using Newtonsoft.Json;
 
 namespace DokumentiApi.Services
 {

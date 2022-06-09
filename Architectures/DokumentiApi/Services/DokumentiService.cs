@@ -30,7 +30,7 @@ namespace DokumentiApi.Services
         public async Task Delete(int dokumentId)
         {
             var dokumentToDelete = await _repositoryManager.Dokumenti.Get(dokumentId, true);
-            _repositoryManager.Dokumenti.DeleteDokument(dokumentToDelete);
+           _repositoryManager.Dokumenti.DeleteDokument(dokumentToDelete);
             await _repositoryManager.Save();
         }
 
@@ -58,6 +58,17 @@ namespace DokumentiApi.Services
             }
 
             return dokumenti;
+        }
+
+        public async Task Update(DokumentDto dokumentDto)
+        {
+            var dokumentToUpdate = await _repositoryManager.Dokumenti.Get(dokumentDto.Id, true);
+
+            Dokument.Map(dokumentDto, dokumentToUpdate);
+
+            _repositoryManager.Dokumenti.Update(dokumentToUpdate);
+
+            await _repositoryManager.Save();
         }
     }
 }

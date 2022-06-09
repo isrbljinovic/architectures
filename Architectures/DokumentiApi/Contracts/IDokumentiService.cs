@@ -13,5 +13,7 @@ namespace DokumentiApi.Contracts
         Task Create(DokumentDto dokumentDto);
 
         Task Delete(int dokumentId);
+
+        Task Update(DokumentDto dokumentDto);
     }
 }

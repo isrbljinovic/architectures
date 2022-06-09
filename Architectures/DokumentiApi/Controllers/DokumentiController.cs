@@ -45,5 +45,11 @@ namespace DokumentiApi.Controllers
         {
             await _dokumentiService.Delete(id);
         }
+
+        [HttpPut]
+        public async Task Update(DokumentDto dokumentDto)
+        {
+            await _dokumentiService.Update(dokumentDto);
+        }
     }
 }

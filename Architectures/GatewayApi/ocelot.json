@@ -60,7 +60,7 @@
         }
       ],
       "UpstreamPathTemplate": "/dokumenti",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
     },
     // PartneriApi
     {

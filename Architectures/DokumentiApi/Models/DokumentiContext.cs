@@ -38,7 +38,7 @@ namespace DokumentiApi.Models
                 entity.HasOne(d => d.Dokument)
                     .WithMany(p => p.Stavkas)
                     .HasForeignKey(d => d.DokumentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("Stavka_DokumentId_fkey");
             });
 

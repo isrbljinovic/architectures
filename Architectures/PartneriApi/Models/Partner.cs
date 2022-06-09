@@ -8,7 +8,7 @@ namespace PartneriApi.Models
     {
         public int Id { get; set; }
         public string Naziv { get; set; }
-        public int IdMjesta { get; set; }
+        public int MjestoId { get; set; }
 
         public virtual Mjesto IdMjestaNavigation { get; set; }
 
@@ -18,7 +18,7 @@ namespace PartneriApi.Models
             {
                 Id = partner.Id,
                 Naziv = partner.Naziv,
-                IdMjesta = partner.IdMjesta,
+                MjestoId = partner.IdMjesta,
             };
 
             return p;
@@ -30,7 +30,7 @@ namespace PartneriApi.Models
             {
                 Id = partner.Id,
                 Naziv = partner.Naziv,
-                IdMjesta = partner.IdMjesta,
+                IdMjesta = partner.MjestoId,
                 NazivMjesta = partner.IdMjestaNavigation.Naziv
             };
 

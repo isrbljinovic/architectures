@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DokumentiApi.DataTransferObjects;
 
 #nullable disable
@@ -7,7 +8,7 @@ namespace DokumentiApi.Models
 {
     public partial class Dokument
     {
-        public Dokument()
+            public Dokument()
         {
             Stavkas = new HashSet<Stavka>();
         }
@@ -57,6 +58,16 @@ namespace DokumentiApi.Models
             }
 
             return dok;
+        }
+
+        public static void Map(DokumentDto from, Dokument to)
+        {
+            to.Vrsta = from.Vrsta;
+
+            foreach (var stavka in from.Stavkas)
+            {
+                to.Stavkas.Where(x => x.Id == stavka.Id).First().Kolicina = stavka.Kolicina;
+            }
         }
     }
 }

@@ -35,12 +35,12 @@ namespace PartneriApi.Models
 
             modelBuilder.Entity<Partner>(entity =>
             {
-                entity.HasKey(e => e.IdMjesta)
+                entity.HasKey(e => e.Id)
                     .HasName("Partner_pkey");
 
                 entity.ToTable("Partner");
 
-                entity.Property(e => e.IdMjesta).ValueGeneratedNever();
+                entity.Property(e => e.MjestoId).ValueGeneratedNever();
 
                 entity.Property(e => e.Id)
                     .ValueGeneratedOnAdd()
@@ -48,9 +48,9 @@ namespace PartneriApi.Models
 
                 entity.HasOne(d => d.IdMjestaNavigation)
                     .WithOne(p => p.Partner)
-                    .HasForeignKey<Partner>(d => d.IdMjesta)
+                    .HasForeignKey<Partner>(d => d.MjestoId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Partner_IdMjesta_fkey");
+                    .HasConstraintName("Partner_MjestoId_fkey");
             });
 
             OnModelCreatingPartial(modelBuilder);

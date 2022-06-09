@@ -13,5 +13,7 @@ namespace DokumentiApi.Contracts.Repository
         void CreateDokument(Dokument dokument);
 
         void DeleteDokument(Dokument dokument);
+
+        void Update(Dokument dokument);
     }
 }

@@ -14,6 +14,9 @@ namespace Mvvm.Services
 
         public async Task DeleteAsync(string uri, string authToken = "")
         {
+            httpClientHandler = new HttpClientHandler();
+            httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+
             HttpClient httpClient = CreateHttpClient(authToken);
             await httpClient.DeleteAsync(uri);
         }
@@ -51,6 +54,9 @@ namespace Mvvm.Services
         {
             try
             {
+                httpClientHandler = new HttpClientHandler();
+                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+
                 HttpClient httpClient = CreateHttpClient(uri);
 
                 var content = new StringContent(JsonConvert.SerializeObject(data));
@@ -80,6 +86,9 @@ namespace Mvvm.Services
         {
             try
             {
+                httpClientHandler = new HttpClientHandler();
+                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+
                 HttpClient httpClient = CreateHttpClient(uri);
 
                 var content = new StringContent(JsonConvert.SerializeObject(data));

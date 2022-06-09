@@ -11,6 +11,10 @@ namespace Mvvm.Contracts
 		Task Create(Dokument dokument);
 
 		Task<string> GetNazivArtikla(int sifraArtikla);
+
+		Task Update(Dokument dokument);
+
+		Task Delete(int id);
 	}
 }
 

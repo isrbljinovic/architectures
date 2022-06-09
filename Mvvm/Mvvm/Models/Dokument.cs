@@ -13,4 +13,3 @@ namespace Mvvm.Models
         public List<Stavka> Stavkas { get; set; }
     }
 }
-

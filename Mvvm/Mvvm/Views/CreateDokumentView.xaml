@@ -9,12 +9,12 @@
     x:Class="Mvvm.Views.CreateDokumentView">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Margin="10">
-            <Label Text="Vrsta dokumenta" />
-            <Entry Placeholder="Vrsta" Text="{Binding Dokument.Vrsta}"></Entry>
+            <Label Text="Naziv dokumenta" />
+            <Entry Placeholder="Naziv" Text="{Binding Dokument.Vrsta}"></Entry>
             <Label Text="Broj dokumenta" />
             <Entry Placeholder="Broj" Text="{Binding Dokument.Broj}"></Entry>
             <Label Text="Partner"/>
-            <Entry Placeholder="Partner" Text="{Binding Dokument.PartnerId}"></Entry>
+            <Picker Title="Odaberi" ItemsSource="{Binding Partneri}" SelectedItem="{Binding SelectedPartner}" ItemDisplayBinding="{Binding Naziv}"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -24,8 +24,8 @@
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="35"/>
               </Grid.RowDefinitions>
-                <Label Text="Šifra artikla" Grid.Row="0" Grid.Column="0"/>
-                <Entry Placeholder="Šifra" Grid.Row="1" Grid.Column="0" Text="{Binding SifraArtikla}"></Entry>
+                <Label Text="Artikl" Grid.Row="0" Grid.Column="0"/>
+                <Picker Grid.Column="0" Grid.Row="1" Title="Odaberi" ItemsSource="{Binding Artikli}" SelectedItem="{Binding SelectedArtikl}" ItemDisplayBinding="{Binding Naziv}"/>
                 <Label Text="Količina" Grid.Row="0" Grid.Column="1"/>
                 <Entry Placeholder="Količina" Grid.Row="1" Grid.Column="1" Text="{Binding KolicinaArtikla}"></Entry>
             </Grid>
@@ -42,6 +42,7 @@
                                         <Span Text="{Binding NazivArtikla}"/>
                                         <Span Text=" : "/>
                                         <Span Text="{Binding Kolicina}"/>
+                                        <Span Text="{Binding JedinicaMjere}"/>
                                     </FormattedString>
                               </Label.FormattedText>
                             </Label>

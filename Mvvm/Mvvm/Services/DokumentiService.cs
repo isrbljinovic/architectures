@@ -25,6 +25,13 @@ namespace Mvvm.Services
             return; 
         }
 
+        public async Task Delete(int id)
+        {
+            var url = $"{ApiConstants.BaseUrl}{ApiConstants.GetDokumenti}/{id}";
+
+            await _httpHandler.DeleteAsync(url);
+        }
+
         public async Task<string> GetNazivArtikla(int sifraArtikla)
         {
             var url = $"{ApiConstants.BaseUrl}artikli/{sifraArtikla}/naziv";
@@ -41,6 +48,13 @@ namespace Mvvm.Services
             var dokumenti = await _httpHandler.GetAsync<List<Dokument>>(url);
 
             return dokumenti;
+        }
+
+        public async Task Update(Dokument dokument)
+        {
+            var url = ApiConstants.BaseUrl + ApiConstants.GetDokumenti;
+
+            await _httpHandler.PutAsync(url, dokument);
         }
     }
 }

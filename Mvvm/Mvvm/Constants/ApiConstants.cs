@@ -6,6 +6,10 @@
 
 		public const string GetDokumenti = "dokumenti";
 		public const string PostDokument = "dokumenti";
+
+        public static string GetPartneri = "partneri";
+
+		public static string GetArtikli = "artikli";
 	}
 }
 

@@ -8,26 +8,46 @@
     utility:ViewModelLocator.AutoWireViewModel="True"
     x:Class="Mvvm.Views.StavkeView">
     <ContentPage.Content>
-        <ListView
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+           </Grid.ColumnDefinitions>
+            <StackLayout Grid.ColumnSpan="2" Orientation="Vertical" Padding="20">
+                <Entry Text="{Binding Dokument.Vrsta}"/>
+                <Label Text="{Binding Dokument.PartnerNaziv}"/>
+            </StackLayout>
+            <ListView
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
                 BackgroundColor="FloralWhite"
                 HasUnevenRows="True"
                 ItemsSource="{Binding Stavke}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell Height="40">
-                            <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding NazivArtikla}"/>
-                                        <Span Text=" : "/>
-                                        <Span Text="{Binding Kolicina}"/>
-                                    </FormattedString>
-                              </Label.FormattedText>
-                            </Label>
+                        <ViewCell Height="60">
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label VerticalOptions="Center" Text="{Binding NazivArtikla}" />
+                                <Entry Grid.Column="1" Text="{Binding Kolicina}"/>
+                                <Label VerticalOptions="Center" Grid.Column="2" Text="{Binding JedinicaMjere}"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Grid.Row="2" Text="Obriši" Background="LightCoral" Command="{Binding ObrisiDokumentCommand}"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Spremi" Background="LightGreen" Command="{Binding SpremiDokumentCommand}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
 

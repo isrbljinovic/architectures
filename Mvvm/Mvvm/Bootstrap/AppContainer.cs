@@ -22,6 +22,8 @@ namespace Mvvm.Bootstrap
 
             builder.RegisterType<HttpHandler>().As<IHttpHandler>();
             builder.RegisterType<DokumentiService>().As<IDokumentiService>();
+            builder.RegisterType<PartneriService>().As<IPartneriService>();
+            builder.RegisterType<ArtikliService>().As<IArtikliService>();
             builder.RegisterType<NavigationService>().As<INavigationService>();
 
             _container = builder.Build();

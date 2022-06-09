@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Mvvm.Contracts;
 using Mvvm.Models;
@@ -36,7 +34,7 @@ namespace Mvvm.ViewModels
         private async void OpenStavke()
         {
             await _navigationService.NavigateToAsync<StavkeViewModel>();
-            MessagingCenter.Send(this, "StavkeView", SelectedDokument.Stavkas);
+            MessagingCenter.Send(this, "StavkeView", SelectedDokument);
         }
 
         private async void Init()

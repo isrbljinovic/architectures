@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,14 +13,12 @@ namespace NLayered.Controllers
     public class DokumentiController : ControllerBase
     {
         private readonly IDokumentiService _dokumentiService;
-        private readonly ILogger<DokumentiController> _logger;
 
         public DokumentiController(
             IDokumentiService dokumentiService,
             ILogger<DokumentiController> logger)
         {
             _dokumentiService = dokumentiService;
-            _logger = logger;
         }
 
         [HttpGet]
@@ -44,6 +43,12 @@ namespace NLayered.Controllers
         public async Task Delete(int id)
         {
             await _dokumentiService.Delete(id);
+        }
+
+        [HttpPut]
+        public async Task Update(DokumentDto dokument)
+        {
+            throw new NotImplementedException();
         }
     }
 }

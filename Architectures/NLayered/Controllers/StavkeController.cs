@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,12 @@ namespace NLayered.Controllers
         public async Task Update(int dokumentId, [FromBody] StavkaDto stavka)
         {
             await _stavkeService.Update(dokumentId, stavka);
+        }
+
+        [HttpDelete]
+        public async Task Delete(StavkaDto stavka)
+        {
+            throw new NotImplementedException();
         }
     }
 }

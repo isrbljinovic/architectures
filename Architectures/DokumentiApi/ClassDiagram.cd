@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DokumentiApi.Controllers.DokumentiController" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAEAAAAIAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\DokumentiController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.DataTransferObjects.DokumentDto" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAAAAABgAAEAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataTransferObjects\DokumentDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.DataTransferObjects.StavkaDto" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAgAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataTransferObjects\StavkaDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Extensions.ServiceExtensions" Collapsed="true">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAEgACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\ServiceExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Models.Artikl" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Artikl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Models.Dokument" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAEAAAAAAAgAAEAIAABAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dokument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Models.DokumentiContext" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAgAAAAEAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DokumentiContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Models.Stavka" Collapsed="true">
+    <Position X="14.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQCAAgAAAAAAAIAAAAAAAAAAAABAAACBAAAAAAAAAA=</HashCode>
+      <FileName>Models\Stavka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Services.Repository.DokumentiRepository">
+    <Position X="6.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\Repository\DokumentiRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DokumentiApi.Services.Repository.RepositoryBase&lt;T&gt;">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEAAAAAAQAAAAAAEAAEAAAAAAAAAAQAA=</HashCode>
+      <FileName>Services\Repository\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DokumentiApi.Services.Repository.RepositoryManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAAAAAAAAAAAAAAAAAACACAAAAAAAAA=</HashCode>
+      <FileName>Services\Repository\RepositoryManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DokumentiApi.Services.DokumentiService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAIEAABgAAAAAAAAA=</HashCode>
+      <FileName>Services\DokumentiService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DokumentiApi.Services.NaziviService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Services\NaziviService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DokumentiApi.Program" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DokumentiApi.Startup" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DokumentiApi.Contracts.Repository.IDokumentiRepository">
+    <Position X="9" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAgAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IDokumentiRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DokumentiApi.Contracts.Repository.IRepositoryBase&lt;T&gt;">
+    <Position X="13.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEAAAAAAQAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DokumentiApi.Contracts.Repository.IRepositoryManager">
+    <Position X="13.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IRepositoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DokumentiApi.Contracts.IDokumentiService">
+    <Position X="11.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IDokumentiService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DokumentiApi.Contracts.INaziviService">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Contracts\INaziviService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

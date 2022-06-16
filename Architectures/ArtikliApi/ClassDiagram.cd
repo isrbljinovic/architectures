@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ArtikliApi.Controllers.ArtikliController" Collapsed="true">
+    <Position X="11.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAIAEAAEABAgAAAAAAgAA=</HashCode>
+      <FileName>Controllers\ArtikliController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.DataTransferObjects.ArtiklDto" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgABAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataTransferObjects\ArtiklDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.Extensions.ServiceExtensions" Collapsed="true">
+    <Position X="13" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAEAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\ServiceExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.Models.Artikl" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgABAAAAAAAAAAACAAAAABAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\Artikl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.Models.ArtikliContext" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAEAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ArtikliContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.Services.Repository.ArtikliRepository">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\Repository\ArtikliRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ArtikliApi.Services.Repository.RepositoryBase&lt;T&gt;">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAAAEAAAAAAQAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Repository\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ArtikliApi.Services.Repository.RepositoryManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAAAAAAAAAAAAQAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Services\Repository\RepositoryManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ArtikliApi.Services.ArtikliService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAIEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\ArtikliServices.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ArtikliApi.Program" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtikliApi.Startup" Collapsed="true">
+    <Position X="14.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ArtikliApi.Contracts.Repository.IArtikliRepository">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IArtikliRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArtikliApi.Contracts.Repository.IRepositoryBase&lt;T&gt;">
+    <Position X="14.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEAAAAAAQAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArtikliApi.Contracts.Repository.IRepositoryManager">
+    <Position X="11.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repository\IRepositoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ArtikliApi.Contracts.IArtikliService">
+    <Position X="13" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IArtikliService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

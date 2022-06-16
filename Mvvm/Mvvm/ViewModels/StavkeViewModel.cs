@@ -39,6 +39,11 @@ namespace Mvvm.ViewModels
         }
 
         public ICommand SpremiDokumentCommand => new Command(SpremiDokument);
+        public ICommand DeleteStavkaCommand => new Command<object>(DeleteStavka);
+
+        private void DeleteStavka(object stavka)
+        {
+        }
 
         private async void SpremiDokument()
         {

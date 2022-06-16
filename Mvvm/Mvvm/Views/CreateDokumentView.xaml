@@ -10,9 +10,9 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Margin="10">
             <Label Text="Naziv dokumenta" />
-            <Entry Placeholder="Naziv" Text="{Binding Dokument.Vrsta}"></Entry>
+            <Entry Placeholder="Naziv" Text="{Binding Dokument.Naziv}"></Entry>
             <Label Text="Broj dokumenta" />
-            <Entry Placeholder="Broj" Text="{Binding Dokument.Broj}"></Entry>
+            <Entry Placeholder="Broj" Text="{Binding Dokument.Broj}" Keyboard="Numeric"></Entry>
             <Label Text="Partner"/>
             <Picker Title="Odaberi" ItemsSource="{Binding Partneri}" SelectedItem="{Binding SelectedPartner}" ItemDisplayBinding="{Binding Naziv}"/>
             <Grid>

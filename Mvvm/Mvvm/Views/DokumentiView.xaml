@@ -24,7 +24,7 @@
                             <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding Vrsta}"/>
+                                        <Span Text="{Binding Naziv}"/>
                                         <Span Text=" "/>
                                         <Span Text="{Binding Broj}"/>
                                     </FormattedString>

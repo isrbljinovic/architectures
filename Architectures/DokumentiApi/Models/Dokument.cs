@@ -14,7 +14,7 @@ namespace DokumentiApi.Models
         }
 
         public int Id { get; set; }
-        public string Vrsta { get; set; }
+        public string Naziv { get; set; }
         public int? Broj { get; set; }
         public int? PartnerId { get; set; }
 
@@ -25,7 +25,7 @@ namespace DokumentiApi.Models
             var dok = new Dokument
             {
                 PartnerId = dokument.PartnerId,
-                Vrsta = dokument.Vrsta,
+                Naziv = dokument.Naziv,
                 Broj = dokument.Broj,
                 Id = dokument.Id,
                 Stavkas = new List<Stavka>(),
@@ -45,7 +45,7 @@ namespace DokumentiApi.Models
             var dok = new DokumentDto
             {
                 PartnerId = dokument.PartnerId.HasValue ? dokument.PartnerId.Value : 0,
-                Vrsta = dokument.Vrsta,
+                Naziv = dokument.Naziv,
                 Broj = dokument.Broj,
                 Id = dokument.Id,
                 Stavkas = new List<StavkaDto>(),
@@ -62,7 +62,7 @@ namespace DokumentiApi.Models
 
         public static void Map(DokumentDto from, Dokument to)
         {
-            to.Vrsta = from.Vrsta;
+            to.Naziv = from.Naziv;
 
             foreach (var stavka in from.Stavkas)
             {

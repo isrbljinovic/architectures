@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -51,6 +52,12 @@ namespace PartneriApi.Controllers
         {
             var partner = await _partneriService.Get(id, false);
             return partner.Naziv;
+        }
+
+        [HttpPut]
+        public Task Update([FromBody] PartnerDto partnerDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

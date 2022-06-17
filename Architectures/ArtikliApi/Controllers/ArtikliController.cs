@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ArtikliApi.Contracts;
@@ -51,6 +52,12 @@ namespace ArtikliApi.Controllers
         {
             var artikl = await _artikliService.Get(sifra, false);
             return artikl.Naziv;
+        }
+
+        [HttpPut]
+        public Task Update([FromBody] ArtiklDto dokumentDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

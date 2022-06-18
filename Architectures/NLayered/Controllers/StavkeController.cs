@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NLayered.Contracts.DataTransferObjects;
 using NLayered.Contracts.Services;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NLayered.Controllers
 {

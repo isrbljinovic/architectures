@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using NLayered.Contracts.DataTransferObjects;
+﻿using NLayered.Contracts.DataTransferObjects;
 using NLayered.Contracts.Models;
 using NLayered.Contracts.Repository;
 using NLayered.Contracts.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NLayered.BusinessLayer.Services
 {

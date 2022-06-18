@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using NLayered.Contracts.Repository;
+﻿using NLayered.Contracts.Repository;
 using NLayered.DataLayer.DbContexts;
+using System.Threading.Tasks;
 
 namespace NLayered.DataLayer.Repositories
 {

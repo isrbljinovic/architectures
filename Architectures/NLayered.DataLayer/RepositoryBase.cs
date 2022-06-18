@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NLayered.Contracts.Repository;
 using NLayered.DataLayer.DbContexts;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace NLayered.DataLayer
 {

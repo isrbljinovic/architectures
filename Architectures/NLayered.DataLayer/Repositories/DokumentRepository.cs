@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NLayered.Contracts.Models;
 using NLayered.Contracts.Repository;
 using NLayered.DataLayer.DbContexts;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NLayered.DataLayer.Repositories
 {

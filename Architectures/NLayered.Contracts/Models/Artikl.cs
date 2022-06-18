@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using NLayered.Contracts.DataTransferObjects;
+﻿using NLayered.Contracts.DataTransferObjects;
+using System.Collections.Generic;
 
 #nullable disable
 

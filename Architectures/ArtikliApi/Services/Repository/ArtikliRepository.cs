@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using ArtikliApi.Contracts.Repository;
+﻿using ArtikliApi.Contracts.Repository;
 using ArtikliApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ArtikliApi.Services.Repository
 {

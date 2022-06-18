@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using DokumentiApi.Contracts.Repository;
+﻿using DokumentiApi.Contracts.Repository;
 using DokumentiApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace DokumentiApi.Services.Repository
 {

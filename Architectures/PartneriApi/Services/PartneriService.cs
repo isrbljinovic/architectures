@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using PartneriApi.Contracts;
+﻿using PartneriApi.Contracts;
 using PartneriApi.Contracts.Repository;
 using PartneriApi.DataTransferObjects;
 using PartneriApi.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PartneriApi.Services
 {

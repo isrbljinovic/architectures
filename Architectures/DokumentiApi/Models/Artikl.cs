@@ -1,11 +1,10 @@
-﻿using System;
-namespace DokumentiApi.Models
+﻿namespace DokumentiApi.Models
 {
-	public class Artikl
-	{
-		public Artikl()
-		{
-		}
-	}
+    public class Artikl
+    {
+        public Artikl()
+        {
+        }
+    }
 }
 

@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using DokumentiApi.Contracts.Repository;
+﻿using DokumentiApi.Contracts.Repository;
 using DokumentiApi.Models;
+using System.Threading.Tasks;
 
 namespace DokumentiApi.Services.Repository
 {

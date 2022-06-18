@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using PartneriApi.Contracts.Repository;
+﻿using PartneriApi.Contracts.Repository;
 using PartneriApi.Models;
+using System.Threading.Tasks;
 
 namespace PartneriApi.Services.Repository
 {

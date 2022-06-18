@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using DokumentiApi.Contracts;
+﻿using DokumentiApi.Contracts;
 using DokumentiApi.Contracts.Repository;
 using DokumentiApi.DataTransferObjects;
 using DokumentiApi.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DokumentiApi.Services
 {
@@ -30,7 +30,7 @@ namespace DokumentiApi.Services
         public async Task Delete(int dokumentId)
         {
             var dokumentToDelete = await _repositoryManager.Dokumenti.Get(dokumentId, true);
-           _repositoryManager.Dokumenti.DeleteDokument(dokumentToDelete);
+            _repositoryManager.Dokumenti.DeleteDokument(dokumentToDelete);
             await _repositoryManager.Save();
         }
 

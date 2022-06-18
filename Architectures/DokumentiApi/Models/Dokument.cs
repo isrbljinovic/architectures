@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DokumentiApi.DataTransferObjects;
+using System.Collections.Generic;
 using System.Linq;
-using DokumentiApi.DataTransferObjects;
 
 #nullable disable
 
@@ -8,7 +8,7 @@ namespace DokumentiApi.Models
 {
     public partial class Dokument
     {
-            public Dokument()
+        public Dokument()
         {
             Stavkas = new HashSet<Stavka>();
         }

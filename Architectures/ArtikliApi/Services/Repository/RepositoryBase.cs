@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using ArtikliApi.Contracts.Repository;
+﻿using ArtikliApi.Contracts.Repository;
 using ArtikliApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace ArtikliApi.Services.Repository
 {

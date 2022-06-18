@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using ArtikliApi.Contracts;
+﻿using ArtikliApi.Contracts;
 using ArtikliApi.Contracts.Repository;
 using ArtikliApi.DataTransferObjects;
 using ArtikliApi.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ArtikliApi.Services
 {

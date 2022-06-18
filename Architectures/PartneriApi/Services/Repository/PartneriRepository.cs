@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PartneriApi.Contracts.Repository;
 using PartneriApi.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PartneriApi.Services.Repository
 {

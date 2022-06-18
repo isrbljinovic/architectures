@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using ArtikliApi.Contracts.Repository;
+﻿using ArtikliApi.Contracts.Repository;
 using ArtikliApi.Models;
+using System.Threading.Tasks;
 
 namespace ArtikliApi.Services.Repository
 {

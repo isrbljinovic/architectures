@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PartneriApi.Contracts.Repository;
 using PartneriApi.Models;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace PartneriApi.Services.Repository
 {

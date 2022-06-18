@@ -1,7 +1,7 @@
-﻿using System;
+﻿using DokumentiApi.Contracts;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using DokumentiApi.Contracts;
 
 namespace DokumentiApi.Services
 {

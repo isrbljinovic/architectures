@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using PartneriApi.DataTransferObjects;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using PartneriApi.DataTransferObjects;
 
 namespace PartneriApi.Contracts
 {

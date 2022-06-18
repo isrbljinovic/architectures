@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ArtikliApi.DataTransferObjects;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using ArtikliApi.DataTransferObjects;
 
 namespace ArtikliApi.Contracts
 {

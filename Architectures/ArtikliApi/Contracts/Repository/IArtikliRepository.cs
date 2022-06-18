@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ArtikliApi.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using ArtikliApi.Models;
 
 namespace ArtikliApi.Contracts.Repository
 {

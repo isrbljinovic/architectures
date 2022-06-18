@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DokumentiApi.DataTransferObjects;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using DokumentiApi.DataTransferObjects;
 
 namespace DokumentiApi.Contracts
 {

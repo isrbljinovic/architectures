@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using PartneriApi.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using PartneriApi.Models;
 
 namespace PartneriApi.Contracts.Repository
 {

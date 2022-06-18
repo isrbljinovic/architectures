@@ -3,11 +3,11 @@
 namespace Mvvm.Views
 {
     public partial class DokumentiView : ContentPage
-	{	
-		public DokumentiView ()
-		{
-			InitializeComponent();
-		}
-	}
+    {
+        public DokumentiView()
+        {
+            InitializeComponent();
+        }
+    }
 }
 

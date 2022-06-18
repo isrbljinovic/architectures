@@ -1,6 +1,5 @@
 ﻿using Mvvm.Bootstrap;
 using Mvvm.Contracts;
-using Mvvm.Views;
 using Xamarin.Forms;
 
 namespace Mvvm

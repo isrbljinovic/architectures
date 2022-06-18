@@ -3,7 +3,7 @@
 namespace Mvvm.Models
 {
     public class Dokument
-	{
+    {
         public int Id { get; set; }
         public string Naziv { get; set; }
         public int? Broj { get; set; }

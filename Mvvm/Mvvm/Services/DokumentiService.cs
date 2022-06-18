@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Mvvm.Constants;
+﻿using Mvvm.Constants;
 using Mvvm.Contracts;
 using Mvvm.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Mvvm.Services
 {
-	public class DokumentiService : IDokumentiService
-	{
+    public class DokumentiService : IDokumentiService
+    {
         private readonly IHttpHandler _httpHandler;
 
         public DokumentiService(IHttpHandler httpHandler)
-		{
+        {
             _httpHandler = httpHandler;
         }
 
@@ -22,7 +21,7 @@ namespace Mvvm.Services
 
             await _httpHandler.PostAsync(url, dokument);
 
-            return; 
+            return;
         }
 
         public async Task Delete(int id)

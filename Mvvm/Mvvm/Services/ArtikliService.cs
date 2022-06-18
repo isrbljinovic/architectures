@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Mvvm.Constants;
+﻿using Mvvm.Constants;
 using Mvvm.Contracts;
 using Mvvm.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Mvvm.Services
 {
-	public class ArtikliService : IArtikliService
-	{
+    public class ArtikliService : IArtikliService
+    {
         private readonly IHttpHandler _httpHandler;
 
         public ArtikliService(IHttpHandler httpHandler)

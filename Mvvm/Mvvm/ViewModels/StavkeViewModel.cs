@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Mvvm.Contracts;
+using Mvvm.Models;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Mvvm.Contracts;
-using Mvvm.Models;
 using Xamarin.Forms;
 
 namespace Mvvm.ViewModels
 {
     public class StavkeViewModel : BaseViewModel
-	{
+    {
         private IDokumentiService _dokumentiService;
 
         private ObservableCollection<Stavka> _stavke;
@@ -24,11 +23,11 @@ namespace Mvvm.ViewModels
         public StavkeViewModel(
             INavigationService navigationService,
             IDokumentiService dokumentiService) : base(navigationService)
-		{
+        {
             _dokumentiService = dokumentiService;
-			MessagingCenter.Subscribe<DokumentiViewModel, Dokument>(this, "StavkeView",
-			   (dokumentiViewModel, dokument) => Sync(dokument));
-		}
+            MessagingCenter.Subscribe<DokumentiViewModel, Dokument>(this, "StavkeView",
+               (dokumentiViewModel, dokument) => Sync(dokument));
+        }
 
         public ICommand ObrisiDokumentCommand => new Command(ObrisiDokument);
 

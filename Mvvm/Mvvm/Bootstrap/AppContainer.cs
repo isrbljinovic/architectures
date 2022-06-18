@@ -1,13 +1,13 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Mvvm.Contracts;
 using Mvvm.Services;
 using Mvvm.ViewModels;
+using System;
 
 namespace Mvvm.Bootstrap
 {
-	public class AppContainer
-	{
+    public class AppContainer
+    {
         private static IContainer _container;
 
         public static void BuildContainer()

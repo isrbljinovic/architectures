@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Mvvm.Contracts;
+﻿using Mvvm.Contracts;
 using Mvvm.ViewModels;
 using Mvvm.Views;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Mvvm.Services
 {
-	public class NavigationService : INavigationService
-	{
+    public class NavigationService : INavigationService
+    {
         private readonly Dictionary<Type, Type> _mappings;
 
         protected Application CurrentApplication => Application.Current;

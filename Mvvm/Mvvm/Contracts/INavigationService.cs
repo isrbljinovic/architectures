@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Mvvm.ViewModels;
+using System;
 using System.Threading.Tasks;
-using Mvvm.ViewModels;
 using Xamarin.Forms;
 
 namespace Mvvm.Contracts
 {
     public interface INavigationService
-	{
+    {
         Task NavigateToAsync(Page page);
 
         Task InitializeAsync();

@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
+﻿using Mvvm.Contracts;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using Mvvm.Contracts;
 
 namespace Mvvm.ViewModels
 {

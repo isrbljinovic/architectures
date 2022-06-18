@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Mvvm.Bootstrap;
+using System;
 using System.Globalization;
 using System.Reflection;
-using Mvvm.Bootstrap;
 using Xamarin.Forms;
 
 namespace Mvvm.Utility

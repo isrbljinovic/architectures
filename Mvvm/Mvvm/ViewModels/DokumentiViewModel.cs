@@ -1,13 +1,13 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using Mvvm.Contracts;
+﻿using Mvvm.Contracts;
 using Mvvm.Models;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Mvvm.ViewModels
 {
     public class DokumentiViewModel : BaseViewModel
-	{
+    {
         private readonly IDokumentiService _dokumentiService;
 
         private ObservableCollection<Dokument> _dokumenti;
@@ -23,7 +23,7 @@ namespace Mvvm.ViewModels
         public DokumentiViewModel(
             INavigationService navigationService,
             IDokumentiService dokumentiService) : base(navigationService)
-		{
+        {
             _dokumentiService = dokumentiService;
             Init();
         }

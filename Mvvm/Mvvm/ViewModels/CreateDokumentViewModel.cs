@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Mvvm.Contracts;
+using Mvvm.Models;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Mvvm.Contracts;
-using Mvvm.Models;
 using Xamarin.Forms;
 
 namespace Mvvm.ViewModels

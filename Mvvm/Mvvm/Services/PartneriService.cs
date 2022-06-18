@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Mvvm.Constants;
+﻿using Mvvm.Constants;
 using Mvvm.Contracts;
 using Mvvm.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Mvvm.Services
 {
     public class PartneriService : IPartneriService
-	{
+    {
         private readonly IHttpHandler _httpHandler;
 
         public PartneriService(IHttpHandler httpHandler)

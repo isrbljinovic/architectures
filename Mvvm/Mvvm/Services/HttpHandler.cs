@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Mvvm.Contracts;
+using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Mvvm.Contracts;
-using Newtonsoft.Json;
 
 namespace Mvvm.Services
 {
-	public class HttpHandler : IHttpHandler
+    public class HttpHandler : IHttpHandler
     {
         private HttpClientHandler httpClientHandler;
 
@@ -45,7 +45,7 @@ namespace Mvvm.Services
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"{ e.GetType().Name + " : " + e.Message}");
+                Debug.WriteLine($"{e.GetType().Name + " : " + e.Message}");
                 throw;
             }
         }
@@ -77,7 +77,7 @@ namespace Mvvm.Services
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"{ e.GetType().Name + " : " + e.Message}");
+                Debug.WriteLine($"{e.GetType().Name + " : " + e.Message}");
                 throw;
             }
         }
@@ -109,7 +109,7 @@ namespace Mvvm.Services
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"{ e.GetType().Name + " : " + e.Message}");
+                Debug.WriteLine($"{e.GetType().Name + " : " + e.Message}");
                 throw;
             }
         }

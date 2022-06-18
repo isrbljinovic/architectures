@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NLayered.Contracts.DataTransferObjects;
 
 #nullable disable
 
@@ -17,5 +18,23 @@ namespace NLayered.Contracts.Models
 
         public virtual Mjesto SjedisteNavigation { get; set; }
         public virtual ICollection<Dokument> Dokuments { get; set; }
+
+        public static PartnerDto ToDto(Partner partner)
+        {
+            return new PartnerDto
+            {
+                Naziv = partner.Naziv,
+                Sjediste = partner.SjedisteNavigation.Id
+            };
+        }
+
+        public static Partner FromDto(PartnerDto partnerDto)
+        {
+            return new Partner
+            {
+                Naziv = partnerDto.Naziv,
+                Sjediste = partnerDto.Sjediste
+            };
+        }
     }
 }

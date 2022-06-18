@@ -9,6 +9,8 @@ namespace NLayered.DataLayer.Repositories
         private FirmaContext _context;
         private IDokumentRepository _dokumentRepository;
         private IStavkaRepository _stavkaRepository;
+        private IArtikliRepository _artikliRepository;
+        private IPartneriRepository _partneriRepository;
 
         public RepositoryManager(FirmaContext dbContext)
         {
@@ -20,6 +22,12 @@ namespace NLayered.DataLayer.Repositories
 
         public IStavkaRepository Stavka => (_stavkaRepository is null) ?
             new StavkaRepository(_context) : _stavkaRepository;
+
+        public IArtikliRepository Artikli => (_artikliRepository is null) ?
+            new ArtikliRepository(_context) : _artikliRepository;
+
+        public IPartneriRepository Partneri => (_partneriRepository is null) ?
+            new PartneriRepository(_context) : _partneriRepository;
 
         public async Task Save()
         {

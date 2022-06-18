@@ -27,6 +27,8 @@ namespace NLayered.Extensions
         {
             services.AddScoped<IDokumentiService, DokumentiService>();
             services.AddScoped<IStavkeService, StavkeService>();
+            services.AddScoped<IArtikliService, ArtikliService>();
+            services.AddScoped<IPartneriService, PartneriService>();
         }
     }
 }

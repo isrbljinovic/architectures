@@ -15,8 +15,7 @@ namespace NLayered.Controllers
         private readonly IDokumentiService _dokumentiService;
 
         public DokumentiController(
-            IDokumentiService dokumentiService,
-            ILogger<DokumentiController> logger)
+            IDokumentiService dokumentiService)
         {
             _dokumentiService = dokumentiService;
         }

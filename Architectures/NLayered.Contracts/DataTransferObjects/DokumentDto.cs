@@ -8,6 +8,7 @@ namespace NLayered.Contracts.DataTransferObjects
         public string Vrsta { get; set; }
         public int? Broj { get; set; }
         public int PartnerId { get; set; }
+        public string NazivPartnera { get; set; }
 
         public virtual List<StavkaDto> Stavkas { get; set; }
     }

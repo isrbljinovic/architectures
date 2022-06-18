@@ -23,6 +23,7 @@ namespace NLayered.Contracts.Models
         {
             return new PartnerDto
             {
+                Id = partner.Id,
                 Naziv = partner.Naziv,
                 Sjediste = partner.SjedisteNavigation.Id
             };
@@ -32,6 +33,7 @@ namespace NLayered.Contracts.Models
         {
             return new Partner
             {
+                Id = partnerDto.Id,
                 Naziv = partnerDto.Naziv,
                 Sjediste = partnerDto.Sjediste
             };

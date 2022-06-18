@@ -6,7 +6,7 @@ using NLayered.Contracts.Services;
 
 namespace NLayered.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PartneriController : ControllerBase
     {
@@ -23,7 +23,7 @@ namespace NLayered.Controllers
             return await _partneriService.GetAll(trackChanges: false);
         }
 
-        [HttpGet("{sifra}")]
+        [HttpGet("{sifra}/naziv")]
         public async Task<string> GetNaziv(int sifra)
         {
             return await _partneriService.GetNaziv(sifra, false);

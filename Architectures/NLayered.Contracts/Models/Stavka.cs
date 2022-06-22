@@ -6,9 +6,9 @@ namespace NLayered.Contracts.Models
 {
     public partial class Stavka
     {
-        public int Id { get; set; }
+        public int IdStavke { get; set; }
         public int DokumentId { get; set; }
-        public int SifraArtikla { get; set; }
+        public int ArtiklId { get; set; }
         public double? Kolicina { get; set; }
 
         public virtual Dokument Dokument { get; set; }
@@ -19,9 +19,9 @@ namespace NLayered.Contracts.Models
             return new Stavka
             {
                 DokumentId = stavkaDto.DokumentId,
-                SifraArtikla = stavkaDto.SifraArtikla,
+                ArtiklId = stavkaDto.ArtiklId,
                 Kolicina = stavkaDto.Kolicina,
-                Id = stavkaDto.Id,
+                IdStavke = stavkaDto.IdStavke,
             };
         }
 
@@ -29,18 +29,18 @@ namespace NLayered.Contracts.Models
         {
             return new StavkaDto
             {
-                Id = stavka.Id,
+                IdStavke = stavka.IdStavke,
                 Kolicina = stavka.Kolicina,
-                SifraArtikla = stavka.SifraArtikla,
+                ArtiklId = stavka.ArtiklId,
                 DokumentId = stavka.DokumentId,
             };
         }
 
         public static void Update(Stavka stavka, StavkaDto stavkaDto)
         {
-            stavka.Id = stavkaDto.Id;
+            stavka.IdStavke = stavkaDto.IdStavke;
             stavka.Kolicina = stavkaDto.Kolicina;
-            stavka.SifraArtikla = stavkaDto.SifraArtikla;
+            stavka.ArtiklId = stavkaDto.ArtiklId;
             stavka.DokumentId = stavkaDto.DokumentId;
         }
     }

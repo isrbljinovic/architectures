@@ -22,7 +22,7 @@ namespace NLayered.DataLayer.Repositories
 
         public async Task<string> GetNaziv(int id, bool trackChanges)
         {
-            var partner = await FindByCondition(x => x.Id == id, trackChanges).FirstOrDefaultAsync();
+            var partner = await FindByCondition(x => x.IdPartnera == id, trackChanges).FirstOrDefaultAsync();
 
             return partner.Naziv;
         }

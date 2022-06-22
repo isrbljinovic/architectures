@@ -23,26 +23,18 @@ namespace NLayered.DataLayer.DbContexts
         public virtual DbSet<Partner> Partners { get; set; }
         public virtual DbSet<Stavka> Stavkas { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseNpgsql("User ID =postgres;Password=posigresi;Server=localhost;Port=5432;Database=Firma; Integrated Security=true;Pooling=true;");
-        //    }
-        //}
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "C");
 
             modelBuilder.Entity<Artikl>(entity =>
             {
-                entity.HasKey(e => e.Sifra)
+                entity.HasKey(e => e.IdArtikla)
                     .HasName("Artikl_pkey");
 
                 entity.ToTable("Artikl");
 
-                entity.Property(e => e.Sifra).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdArtikla).UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Cijena).HasColumnType("money");
             });
@@ -51,7 +43,7 @@ namespace NLayered.DataLayer.DbContexts
             {
                 entity.ToTable("Dokument");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdDokumenta).UseIdentityAlwaysColumn();
 
                 entity.HasOne(d => d.Partner)
                     .WithMany(p => p.Dokuments)
@@ -62,7 +54,7 @@ namespace NLayered.DataLayer.DbContexts
 
             modelBuilder.Entity<Drzava>(entity =>
             {
-                entity.HasKey(e => e.Oznaka)
+                entity.HasKey(e => e.IdDrzave)
                     .HasName("Drzava_pkey");
 
                 entity.ToTable("Drzava");
@@ -74,15 +66,15 @@ namespace NLayered.DataLayer.DbContexts
             {
                 entity.ToTable("Mjesto");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdMjesto).UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Naziv).IsRequired();
 
-                entity.Property(e => e.OznakaDrzave).IsRequired();
+                entity.Property(e => e.DrzavaId).IsRequired();
 
                 entity.HasOne(d => d.OznakaDrzaveNavigation)
                     .WithMany(p => p.Mjestos)
-                    .HasForeignKey(d => d.OznakaDrzave)
+                    .HasForeignKey(d => d.DrzavaId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Mjesto_OznakaDrzave_fkey");
             });
@@ -91,7 +83,7 @@ namespace NLayered.DataLayer.DbContexts
             {
                 entity.ToTable("Partner");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdPartnera).UseIdentityAlwaysColumn();
 
                 entity.HasOne(d => d.SjedisteNavigation)
                     .WithMany(p => p.Partners)
@@ -103,7 +95,7 @@ namespace NLayered.DataLayer.DbContexts
             {
                 entity.ToTable("Stavka");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdStavke).UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Kolicina).HasDefaultValueSql("0");
 
@@ -115,7 +107,7 @@ namespace NLayered.DataLayer.DbContexts
 
                 entity.HasOne(d => d.SifraArtiklaNavigation)
                     .WithMany(p => p.Stavkas)
-                    .HasForeignKey(d => d.SifraArtikla)
+                    .HasForeignKey(d => d.ArtiklId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Stavka_SifraArtikla_fkey");
             });

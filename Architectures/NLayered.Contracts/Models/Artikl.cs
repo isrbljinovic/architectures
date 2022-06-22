@@ -12,7 +12,7 @@ namespace NLayered.Contracts.Models
             Stavkas = new HashSet<Stavka>();
         }
 
-        public int Sifra { get; set; }
+        public int IdArtikla { get; set; }
         public string Naziv { get; set; }
         public decimal? Cijena { get; set; }
         public string JedinicaMjere { get; set; }
@@ -23,7 +23,7 @@ namespace NLayered.Contracts.Models
         {
             return new ArtiklDto
             {
-                Sifra = artikl.Sifra,
+                IdArtikla = artikl.IdArtikla,
                 Naziv = artikl.Naziv,
                 Cijena = artikl.Cijena,
                 JedinicaMjere = artikl.JedinicaMjere

@@ -12,7 +12,7 @@ namespace NLayered.Contracts.Models
             Dokuments = new HashSet<Dokument>();
         }
 
-        public int Id { get; set; }
+        public int IdPartnera { get; set; }
         public string Naziv { get; set; }
         public int? Sjediste { get; set; }
 
@@ -23,9 +23,10 @@ namespace NLayered.Contracts.Models
         {
             return new PartnerDto
             {
-                Id = partner.Id,
+                IdPartnera = partner.IdPartnera,
                 Naziv = partner.Naziv,
-                Sjediste = partner.SjedisteNavigation.Id
+                Sjediste = partner.SjedisteNavigation.IdMjesto,
+                NazivSjedista = partner.SjedisteNavigation.Naziv,
             };
         }
 
@@ -33,7 +34,7 @@ namespace NLayered.Contracts.Models
         {
             return new Partner
             {
-                Id = partnerDto.Id,
+                IdPartnera = partnerDto.IdPartnera,
                 Naziv = partnerDto.Naziv,
                 Sjediste = partnerDto.Sjediste
             };

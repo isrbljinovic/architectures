@@ -19,9 +19,9 @@ namespace NLayered.DataLayer.Repositories
                 .ToListAsync();
         }
 
-        public async Task<string> GetNaziv(int sifra, bool trackChanges)
+        public async Task<string> GetNaziv(int id, bool trackChanges)
         {
-            var artikl = await FindByCondition(x => x.Sifra == sifra, trackChanges).FirstOrDefaultAsync();
+            var artikl = await FindByCondition(x => x.IdArtikla == id, trackChanges).FirstOrDefaultAsync();
 
             return artikl.Naziv;
         }

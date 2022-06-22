@@ -51,7 +51,7 @@ namespace NLayered.BusinessLayer.Services
 
         public async Task Update(int dokumentId, StavkaDto stavkaDto)
         {
-            var stavka = await _repositoryManager.Stavka.GetStavka(dokumentId, stavkaDto.Id, true);
+            var stavka = await _repositoryManager.Stavka.GetStavka(dokumentId, stavkaDto.IdStavke, true);
             Stavka.Update(stavka, stavkaDto);
             await _repositoryManager.Save();
         }

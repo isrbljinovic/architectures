@@ -25,7 +25,7 @@ namespace NLayered.DataLayer.Repositories
 
         public async Task<Dokument> Get(int id, bool trackChanges)
         {
-            return await FindByCondition(d => d.Id.Equals(id), trackChanges)
+            return await FindByCondition(d => d.IdDokumenta.Equals(id), trackChanges)
                 .Include(d => d.Stavkas)
                 .SingleAsync();
         }

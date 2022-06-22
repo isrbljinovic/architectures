@@ -11,7 +11,7 @@ namespace NLayered.Contracts.Models
             Mjestos = new HashSet<Mjesto>();
         }
 
-        public string Oznaka { get; set; }
+        public string IdDrzave { get; set; }
         public string Naziv { get; set; }
         public int Sifra { get; set; }
 

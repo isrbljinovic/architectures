@@ -31,7 +31,7 @@ namespace NLayered.DataLayer.Repositories
 
         public async Task<Stavka> GetStavka(int dokumentId, int stavkaId, bool trackChanges)
         {
-            return await FindByCondition(s => s.DokumentId.Equals(dokumentId) && s.Id.Equals(stavkaId), trackChanges).SingleOrDefaultAsync();
+            return await FindByCondition(s => s.DokumentId.Equals(dokumentId) && s.IdStavke.Equals(stavkaId), trackChanges).SingleOrDefaultAsync();
         }
     }
 }

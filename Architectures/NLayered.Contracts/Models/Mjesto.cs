@@ -11,8 +11,8 @@ namespace NLayered.Contracts.Models
             Partners = new HashSet<Partner>();
         }
 
-        public int Id { get; set; }
-        public string OznakaDrzave { get; set; }
+        public int IdMjesto { get; set; }
+        public string DrzavaId { get; set; }
         public string Naziv { get; set; }
 
         public virtual Drzava OznakaDrzaveNavigation { get; set; }

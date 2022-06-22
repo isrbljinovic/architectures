@@ -23,10 +23,10 @@ namespace NLayered.Controllers
             return await _artikliService.GetAll(trackChanges: false);
         }
 
-        [HttpGet("{sifra}/naziv")]
-        public async Task<string> GetNaziv(int sifra)
+        [HttpGet("{id}/naziv")]
+        public async Task<string> GetNaziv(int id)
         {
-            return await _artikliService.GetNaziv(sifra, false);
+            return await _artikliService.GetNaziv(id, false);
         }
     }
 }

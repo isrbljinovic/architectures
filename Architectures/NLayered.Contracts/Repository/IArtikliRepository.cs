@@ -8,7 +8,7 @@ namespace NLayered.Contracts.Repository
     {
         Task<IEnumerable<Artikl>> GetAll(bool trackChanges);
 
-        Task<string> GetNaziv(int sifra, bool trackChanges);
+        Task<string> GetNaziv(int id, bool trackChanges);
     }
 }
 

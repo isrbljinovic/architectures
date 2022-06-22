@@ -12,7 +12,7 @@ namespace NLayered.Contracts.Models
             Stavkas = new HashSet<Stavka>();
         }
 
-        public int Id { get; set; }
+        public int IdDokumenta { get; set; }
         public string Vrsta { get; set; }
         public int? Broj { get; set; }
         public int PartnerId { get; set; }
@@ -27,7 +27,7 @@ namespace NLayered.Contracts.Models
                 PartnerId = dokument.PartnerId,
                 Vrsta = dokument.Vrsta,
                 Broj = dokument.Broj,
-                Id = dokument.Id,
+                IdDokumenta = dokument.IdDokumenta,
                 Stavkas = new List<Stavka>(),
             };
 
@@ -47,7 +47,7 @@ namespace NLayered.Contracts.Models
                 PartnerId = dokument.PartnerId,
                 Vrsta = dokument.Vrsta,
                 Broj = dokument.Broj,
-                Id = dokument.Id,
+                IdDokumenta = dokument.IdDokumenta,
                 Stavkas = new List<StavkaDto>(),
             };
 

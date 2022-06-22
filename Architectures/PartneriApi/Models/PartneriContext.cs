@@ -26,23 +26,23 @@ namespace PartneriApi.Models
             {
                 entity.ToTable("Mjesto");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdMjesta).UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Naziv).IsRequired();
 
-                entity.Property(e => e.OznakaDrzava).IsRequired();
+                entity.Property(e => e.DrzavaId).IsRequired();
             });
 
             modelBuilder.Entity<Partner>(entity =>
             {
-                entity.HasKey(e => e.Id)
+                entity.HasKey(e => e.IdPartnera)
                     .HasName("Partner_pkey");
 
                 entity.ToTable("Partner");
 
                 entity.Property(e => e.MjestoId).ValueGeneratedNever();
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.IdPartnera)
                     .ValueGeneratedOnAdd()
                     .UseIdentityAlwaysColumn();
 

@@ -6,7 +6,7 @@ namespace PartneriApi.Models
 {
     public partial class Partner
     {
-        public int Id { get; set; }
+        public int IdPartnera { get; set; }
         public string Naziv { get; set; }
         public int MjestoId { get; set; }
 
@@ -16,9 +16,9 @@ namespace PartneriApi.Models
         {
             var p = new Partner
             {
-                Id = partner.Id,
+                IdPartnera = partner.IdPartnera,
                 Naziv = partner.Naziv,
-                MjestoId = partner.IdMjesta,
+                MjestoId = partner.MjestoId,
             };
 
             return p;
@@ -28,9 +28,9 @@ namespace PartneriApi.Models
         {
             var p = new PartnerDto
             {
-                Id = partner.Id,
+                IdPartnera = partner.IdPartnera,
                 Naziv = partner.Naziv,
-                IdMjesta = partner.MjestoId,
+                MjestoId = partner.MjestoId,
                 NazivMjesta = partner.IdMjestaNavigation.Naziv
             };
 

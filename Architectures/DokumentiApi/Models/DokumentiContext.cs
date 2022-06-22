@@ -26,14 +26,14 @@ namespace DokumentiApi.Models
             {
                 entity.ToTable("Dokument");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdDokumenta).UseIdentityAlwaysColumn();
             });
 
             modelBuilder.Entity<Stavka>(entity =>
             {
                 entity.ToTable("Stavka");
 
-                entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdStavke).UseIdentityAlwaysColumn();
 
                 entity.HasOne(d => d.Dokument)
                     .WithMany(p => p.Stavkas)

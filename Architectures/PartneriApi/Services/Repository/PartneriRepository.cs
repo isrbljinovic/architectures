@@ -24,7 +24,7 @@ namespace PartneriApi.Services.Repository
 
         public async Task<Partner> Get(int id, bool trackChanges)
         {
-            return await FindByCondition(d => d.Id.Equals(id), trackChanges)
+            return await FindByCondition(d => d.IdPartnera.Equals(id), trackChanges)
                 .Include(s => s.IdMjestaNavigation)
                 .SingleAsync();
         }

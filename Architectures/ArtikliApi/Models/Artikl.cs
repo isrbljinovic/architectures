@@ -6,7 +6,7 @@ namespace ArtikliApi.Models
 {
     public partial class Artikl
     {
-        public int Sifra { get; set; }
+        public int IdArtikla { get; set; }
         public string Naziv { get; set; }
         public string JedinicaMjere { get; set; }
         public decimal? Cijena { get; set; }
@@ -15,7 +15,7 @@ namespace ArtikliApi.Models
         {
             return new Artikl
             {
-                Sifra = artikl.Sifra,
+                IdArtikla = artikl.IdArtikla,
                 Naziv = artikl.Naziv,
                 JedinicaMjere = artikl.JedinicaMjere,
                 Cijena = artikl.Cijena
@@ -26,7 +26,7 @@ namespace ArtikliApi.Models
         {
             return new ArtiklDto
             {
-                Sifra = artikl.Sifra,
+                IdArtikla = artikl.IdArtikla,
                 Naziv = artikl.Naziv,
                 JedinicaMjere = artikl.JedinicaMjere,
                 Cijena = artikl.Cijena.HasValue ? artikl.Cijena.Value : 0

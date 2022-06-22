@@ -2,9 +2,9 @@
 {
     public class StavkaDto
     {
-        public int Id { get; set; }
+        public int IdStavke { get; set; }
         public int DokumentId { get; set; }
-        public int SifraArtikla { get; set; }
+        public int ArtiklId { get; set; }
         public string NazivArtikla { get; set; }
         public double? Kolicina { get; set; }
     }

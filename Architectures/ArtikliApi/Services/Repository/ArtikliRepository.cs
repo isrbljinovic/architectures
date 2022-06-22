@@ -24,7 +24,7 @@ namespace ArtikliApi.Services.Repository
 
         public async Task<Artikl> Get(int sifra, bool trackChanges)
         {
-            return await FindByCondition(d => d.Sifra.Equals(sifra), trackChanges)
+            return await FindByCondition(d => d.IdArtikla.Equals(sifra), trackChanges)
                 .SingleAsync();
         }
 

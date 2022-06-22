@@ -23,12 +23,12 @@ namespace ArtikliApi.Models
 
             modelBuilder.Entity<Artikl>(entity =>
             {
-                entity.HasKey(e => e.Sifra)
+                entity.HasKey(e => e.IdArtikla)
                     .HasName("Artikl_pkey");
 
                 entity.ToTable("Artikl");
 
-                entity.Property(e => e.Sifra).UseIdentityAlwaysColumn();
+                entity.Property(e => e.IdArtikla).UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Cijena).HasColumnType("money");
             });

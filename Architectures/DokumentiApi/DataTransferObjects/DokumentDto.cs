@@ -4,7 +4,7 @@ namespace DokumentiApi.DataTransferObjects
 {
     public class DokumentDto
     {
-        public int Id { get; set; }
+        public int IdDokumenta { get; set; }
         public string Naziv { get; set; }
         public int? Broj { get; set; }
         public int PartnerId { get; set; }

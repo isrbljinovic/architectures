@@ -29,10 +29,10 @@ namespace ArtikliApi.Controllers
             return await _artikliService.GetAll(trackChanges: false);
         }
 
-        [HttpGet("{sifra}")]
-        public async Task<ArtiklDto> Get(int sifra)
+        [HttpGet("{id}")]
+        public async Task<ArtiklDto> Get(int id)
         {
-            return await _artikliService.Get(sifra, false);
+            return await _artikliService.Get(id, false);
         }
 
         [HttpPost]
@@ -41,16 +41,16 @@ namespace ArtikliApi.Controllers
             await _artikliService.Create(dokumentDto);
         }
 
-        [HttpDelete("{sifra}")]
+        [HttpDelete("{id}")]
         public async Task Delete(int id)
         {
             await _artikliService.Delete(id);
         }
 
-        [HttpGet("{sifra}/naziv")]
-        public async Task<string> GetNaziv(int sifra)
+        [HttpGet("{id}/naziv")]
+        public async Task<string> GetNaziv(int id)
         {
-            var artikl = await _artikliService.Get(sifra, false);
+            var artikl = await _artikliService.Get(id, false);
             return artikl.Naziv;
         }
 

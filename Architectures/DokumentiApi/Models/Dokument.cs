@@ -13,7 +13,7 @@ namespace DokumentiApi.Models
             Stavkas = new HashSet<Stavka>();
         }
 
-        public int Id { get; set; }
+        public int IdDokumenta { get; set; }
         public string Naziv { get; set; }
         public int? Broj { get; set; }
         public int? PartnerId { get; set; }
@@ -27,7 +27,7 @@ namespace DokumentiApi.Models
                 PartnerId = dokument.PartnerId,
                 Naziv = dokument.Naziv,
                 Broj = dokument.Broj,
-                Id = dokument.Id,
+                IdDokumenta = dokument.IdDokumenta,
                 Stavkas = new List<Stavka>(),
             };
 
@@ -47,7 +47,7 @@ namespace DokumentiApi.Models
                 PartnerId = dokument.PartnerId.HasValue ? dokument.PartnerId.Value : 0,
                 Naziv = dokument.Naziv,
                 Broj = dokument.Broj,
-                Id = dokument.Id,
+                IdDokumenta = dokument.IdDokumenta,
                 Stavkas = new List<StavkaDto>(),
             };
 
@@ -66,7 +66,7 @@ namespace DokumentiApi.Models
 
             foreach (var stavka in from.Stavkas)
             {
-                to.Stavkas.Where(x => x.Id == stavka.Id).First().Kolicina = stavka.Kolicina;
+                to.Stavkas.Where(x => x.IdStavke == stavka.IdStavke).First().Kolicina = stavka.Kolicina;
             }
         }
     }

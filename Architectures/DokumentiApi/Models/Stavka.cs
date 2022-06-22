@@ -6,9 +6,9 @@ namespace DokumentiApi.Models
 {
     public partial class Stavka
     {
-        public int Id { get; set; }
+        public int IdStavke { get; set; }
         public int DokumentId { get; set; }
-        public int? SifraArtikla { get; set; }
+        public int? ArtiklId { get; set; }
         public double? Kolicina { get; set; }
 
         public virtual Dokument Dokument { get; set; }
@@ -18,9 +18,9 @@ namespace DokumentiApi.Models
             return new Stavka
             {
                 DokumentId = stavkaDto.DokumentId,
-                SifraArtikla = stavkaDto.SifraArtikla,
+                ArtiklId = stavkaDto.ArtiklId,
                 Kolicina = stavkaDto.Kolicina,
-                Id = stavkaDto.Id,
+                IdStavke = stavkaDto.IdStavke,
             };
         }
 
@@ -28,18 +28,18 @@ namespace DokumentiApi.Models
         {
             return new StavkaDto
             {
-                Id = stavka.Id,
+                IdStavke = stavka.IdStavke,
                 Kolicina = stavka.Kolicina,
-                SifraArtikla = stavka.SifraArtikla.HasValue ? stavka.SifraArtikla.Value : 0,
+                ArtiklId = stavka.ArtiklId.HasValue ? stavka.ArtiklId.Value : 0,
                 DokumentId = stavka.DokumentId,
             };
         }
 
         public static void Update(Stavka stavka, StavkaDto stavkaDto)
         {
-            stavka.Id = stavkaDto.Id;
+            stavka.IdStavke = stavkaDto.IdStavke;
             stavka.Kolicina = stavkaDto.Kolicina;
-            stavka.SifraArtikla = stavkaDto.SifraArtikla;
+            stavka.ArtiklId = stavkaDto.ArtiklId;
             stavka.DokumentId = stavkaDto.DokumentId;
         }
     }

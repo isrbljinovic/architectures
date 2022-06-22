@@ -51,7 +51,7 @@ namespace DokumentiApi.Services
                 var dto = Dokument.ToDto(doc);
                 foreach (var stavka in dto.Stavkas)
                 {
-                    stavka.NazivArtikla = await _naziviService.GetArtikl(stavka.SifraArtikla);
+                    stavka.NazivArtikla = await _naziviService.GetArtikl(stavka.ArtiklId);
                 }
                 dto.PartnerNaziv = await _naziviService.GetPartner(doc.PartnerId.Value);
                 dokumenti.Add(dto);
@@ -62,7 +62,7 @@ namespace DokumentiApi.Services
 
         public async Task Update(DokumentDto dokumentDto)
         {
-            var dokumentToUpdate = await _repositoryManager.Dokumenti.Get(dokumentDto.Id, true);
+            var dokumentToUpdate = await _repositoryManager.Dokumenti.Get(dokumentDto.IdDokumenta, true);
 
             Dokument.Map(dokumentDto, dokumentToUpdate);
 

@@ -33,7 +33,7 @@ namespace Mvvm.ViewModels
 
         private async void ObrisiDokument()
         {
-            await _dokumentiService.Delete(Dokument.Id);
+            await _dokumentiService.Delete(Dokument.IdDokumenta);
             await _navigationService.NavigateBackAsync();
         }
 

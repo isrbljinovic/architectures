@@ -18,6 +18,8 @@ namespace Mvvm.Bootstrap
             builder.RegisterType<StavkeViewModel>();
             builder.RegisterType<CreateDokumentViewModel>();
             builder.RegisterType<MainViewModel>();
+            builder.RegisterType<PartneriViewModel>();
+            builder.RegisterType<ArtikliViewModel>();
 
 
             builder.RegisterType<HttpHandler>().As<IHttpHandler>();

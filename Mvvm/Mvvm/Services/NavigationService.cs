@@ -116,6 +116,8 @@ namespace Mvvm.Services
             _mappings.Add(typeof(DokumentiViewModel), typeof(DokumentiView));
             _mappings.Add(typeof(CreateDokumentViewModel), typeof(CreateDokumentView));
             _mappings.Add(typeof(StavkeViewModel), typeof(StavkeView));
+            _mappings.Add(typeof(PartneriViewModel), typeof(PartneriView));
+            _mappings.Add(typeof(ArtikliViewModel), typeof(ArtikliView));
         }
     }
 }

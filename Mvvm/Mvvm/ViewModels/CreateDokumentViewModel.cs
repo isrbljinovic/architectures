@@ -57,12 +57,12 @@ namespace Mvvm.ViewModels
 
         private async void DodajArtikl()
         {
-            var naziv = await _dokumentiService.GetNazivArtikla(SelectedArtikl.Sifra);
+            var naziv = await _dokumentiService.GetNazivArtikla(SelectedArtikl.IdArtikla);
 
             Stavke.Add(new Stavka
             {
                 Kolicina = KolicinaArtikla,
-                SifraArtikla = SelectedArtikl.Sifra,
+                SifraArtikla = SelectedArtikl.IdArtikla,
                 NazivArtikla = naziv
             });
         }
@@ -72,7 +72,7 @@ namespace Mvvm.ViewModels
         private async void SpremiDokument()
         {
             Dokument.Stavkas = new List<Stavka>(Stavke);
-            Dokument.PartnerId = SelectedPartner.Id;
+            Dokument.PartnerId = SelectedPartner.IdPartnera;
 
             await _dokumentiService.Create(Dokument);
 

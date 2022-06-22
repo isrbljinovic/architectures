@@ -10,6 +10,8 @@
     <StackLayout Padding="50">
         <Button Text="Pregled dokumenata" Command="{Binding DokumentiViewCommand}" Background="LightGray"/>
         <Button Text="Novi dokument" Command="{Binding CreateDokumentViewCommand}" Background="LightGray"/>
+        <Button Text="Pregled partnera" Command="{Binding PartneriViewCommand}" Background="LightGray"/>
+        <Button Text="Pregled artikala" Command="{Binding ArtikliViewCommand}" Background="LightGray"/>
     </StackLayout>
 
 </ContentPage>

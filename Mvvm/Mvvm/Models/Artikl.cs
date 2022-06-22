@@ -2,7 +2,7 @@
 {
     public class Artikl
     {
-        public int Sifra { get; set; }
+        public int IdArtikla { get; set; }
 
         public string Naziv { get; set; }
 

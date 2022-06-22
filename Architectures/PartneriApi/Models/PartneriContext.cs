@@ -24,6 +24,9 @@ namespace PartneriApi.Models
 
             modelBuilder.Entity<Mjesto>(entity =>
             {
+                entity.HasKey(e => e.IdMjesta)
+                    .HasName("Mjesto_pkey");
+
                 entity.ToTable("Mjesto");
 
                 entity.Property(e => e.IdMjesta).UseIdentityAlwaysColumn();

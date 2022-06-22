@@ -24,6 +24,9 @@ namespace DokumentiApi.Models
 
             modelBuilder.Entity<Dokument>(entity =>
             {
+                entity.HasKey(e => e.IdDokumenta)
+                    .HasName("Dokument_pkey");
+
                 entity.ToTable("Dokument");
 
                 entity.Property(e => e.IdDokumenta).UseIdentityAlwaysColumn();
@@ -31,6 +34,9 @@ namespace DokumentiApi.Models
 
             modelBuilder.Entity<Stavka>(entity =>
             {
+                entity.HasKey(e => e.IdStavke)
+                    .HasName("Stavka_pkey");
+
                 entity.ToTable("Stavka");
 
                 entity.Property(e => e.IdStavke).UseIdentityAlwaysColumn();

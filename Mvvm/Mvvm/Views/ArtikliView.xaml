@@ -15,15 +15,16 @@
                 ItemsSource="{Binding Artikli}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell Height="50">
-                            <StackLayout Orientation="Vertical">
+                        <ViewCell Height="65">
+                            <StackLayout Orientation="Vertical" Padding="10">
                                 <Label
                                     VerticalTextAlignment="Center"
-                                    HorizontalTextAlignment="Center"
                                     Text="{Binding Naziv}"
                                     FontSize="Large"/>
 
-                                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium">
+                                <Label
+                                    VerticalTextAlignment="Center"
+                                    FontSize="Medium">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="Cijena:"/>

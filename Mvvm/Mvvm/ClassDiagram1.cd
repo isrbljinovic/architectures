@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Mvvm.Behaviors.BindableBehavior&lt;T&gt;" Collapsed="true">
-    <Position X="8.25" Y="4.75" Width="1.75" />
+    <Position X="7.5" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAgAAAABIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behaviors\BindableBehavior.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.Behaviors.EventToCommandBehavior" Collapsed="true">
-    <Position X="8" Y="5.75" Width="2.25" />
+    <Position X="7.5" Y="5.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAQAAIAAACAAgABIABAYEAAAQAAABCABAAEAA=</HashCode>
       <FileName>Behaviors\EventToCommandBehavior.cs</FileName>
@@ -31,33 +31,33 @@
   <Class Name="Mvvm.Models.Artikl" Collapsed="true">
     <Position X="10.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAgABAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAgABAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Models\Artikl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.Models.Dokument" Collapsed="true">
     <Position X="7.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAEAAAAAABgAAEAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAAAEAAAAAABgAAEAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Dokument.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.Models.Partner" Collapsed="true">
     <Position X="10.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACABAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Partner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.Models.Stavka" Collapsed="true">
     <Position X="7.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAACAAgAABAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAgAABAAAAIAAAAAAAAgAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Models\Stavka.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.Services.ArtikliService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="6.5" Width="1.5" />
+    <Position X="10" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Services\ArtikliService.cs</FileName>
@@ -73,7 +73,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Mvvm.Services.HttpHandler" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="7.25" Width="1.5" />
+    <Position X="12.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAIA=</HashCode>
       <FileName>Services\HttpHandler.cs</FileName>
@@ -112,7 +112,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Mvvm.ViewModels.CreateDokumentViewModel">
-    <Position X="5.5" Y="1.75" Width="2.25" />
+    <Position X="5" Y="1.75" Width="2.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -122,7 +122,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.ViewModels.DokumentiViewModel">
-    <Position X="8" Y="1.75" Width="2.25" />
+    <Position X="7.5" Y="1.75" Width="2.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -132,19 +132,19 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.ViewModels.MainViewModel">
-    <Position X="10.5" Y="1.75" Width="2.5" />
+    <Position X="10" Y="1.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AggAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAACAAAAAAA=</HashCode>
       <FileName>ViewModels\MainViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mvvm.ViewModels.StavkeViewModel">
-    <Position X="14" Y="1.75" Width="2.25" />
+    <Position X="14.5" Y="1.75" Width="2.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAACAAEAEAAQAAAAAAIACBAAAJAAAAAA=</HashCode>
+      <HashCode>AAAAAAABQAAAAACAAEAEAAQAAAAQAIACBAAAJAAAAAA=</HashCode>
       <FileName>ViewModels\StavkeViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -190,36 +190,50 @@
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Mvvm.ViewModels.PartneriViewModel">
+    <Position X="14.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAACAAABAAA=</HashCode>
+      <FileName>ViewModels\PartneriViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mvvm.ViewModels.ArtikliViewModel">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAgAA=</HashCode>
+      <FileName>ViewModels\ArtikliViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Mvvm.Contracts.IArtikliService">
-    <Position X="10.5" Y="4.25" Width="1.5" />
+    <Position X="10" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Contracts\IArtikliService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Mvvm.Contracts.IDokumentiService">
-    <Position X="14.25" Y="5.25" Width="1.75" />
+    <Position X="12.5" Y="5.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAgAAAAAAAACAAAAAAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Contracts\IDokumentiService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Mvvm.Contracts.IHttpHandler">
-    <Position X="12.5" Y="8" Width="1.5" />
+    <Position X="12.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAIA=</HashCode>
       <FileName>Contracts\IHttpHandler.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Mvvm.Contracts.INavigationService">
-    <Position X="14.25" Y="7.25" Width="1.75" />
+    <Position X="14.25" Y="8.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>EAAAAIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Contracts\INavigationService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Mvvm.Contracts.IPartneriService">
-    <Position X="12.25" Y="4.25" Width="1.5" />
+    <Position X="11.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Contracts\IPartneriService.cs</FileName>
